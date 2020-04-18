@@ -29,10 +29,13 @@ def menu():
 	return response
 
 
-
-def create_contact():
+def get_info():
 	name = input("Name: ")
 	phone = input("Phone: ")
+	return name, phone
+
+def create_contact():
+	name, phone = get_info()
 	if contact.create(name, phone):
 		print(messages.get('succ'))
 	else:
@@ -56,8 +59,7 @@ def update_contact():
 	name = input("Enter a name to update: ")
 	found = contact.find(name)
 	if found:
-		new_name = input("New Name: ")
-		new_phone = input("New Phone: ")
+		name, phone = get_info()
 		if contact.update(name, new_name, new_phone):
 			print(messages.get('succ'))
 		else:
