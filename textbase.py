@@ -2,6 +2,8 @@
 # Features: Create, Find, Update, Delete contact and Display contacts
 # author: @saeidxgholami
 
+import os
+
 import contact
 
 
@@ -94,9 +96,11 @@ actions = {
 }
 def main():
 	while True:
+		os.system('cls') if os.name == 'nt' else os.system('clear')
 		response = menu()
 		if actions.get(response) is not None:
 			actions[response]()
+			input('\nEnter any key to back to menu...')
 		else:
 			print(messages.get('err'))
 
