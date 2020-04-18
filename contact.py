@@ -10,7 +10,7 @@ def find(name):
 
 def create(name, phone):
 	contacts[name] = phone
-
+	return True
 
 def read():
 	return contacts.items()

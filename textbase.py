@@ -5,6 +5,13 @@
 import contact
 
 
+messages = {
+	'nf': 'Not Found',
+	'succ': 'Success',
+	'err': 'Some error occurred.'
+}
+
+
 
 def menu():
 	menu_items = [
@@ -22,13 +29,14 @@ def menu():
 	return response
 
 
+
 def create_contact():
 	name = input("Name: ")
 	phone = input("Phone: ")
 	if contact.create(name, phone):
-		print('Contact created successfuly.')
+		print(messages.get('succ'))
 	else:
-		print('Error')
+		print(messages.get('err'))
 
 
 def display_contacts():
@@ -42,7 +50,7 @@ def find_contact():
 	if found:
 		print(contact.contacts[name])
 	else:
-		print('not found')
+		print(messages.get('nf'))
 
 def update_contact():
 	name = input("Enter a name to update: ")
@@ -51,11 +59,11 @@ def update_contact():
 		new_name = input("New Name: ")
 		new_phone = input("New Phone: ")
 		if contact.update(name, new_name, new_phone):
-			print('Updaetd!')
+			print(messages.get('succ'))
 		else:
-			print('Error in update!')
+			print(messages.get('err'))
 	else:
-		print('Contact not found.')
+		print(messages.get('nf'))
 
 
 def delete_contact():
@@ -63,31 +71,32 @@ def delete_contact():
 	found = contact.find(name)
 	if found:
 		contact.delete(name)
+		print(messages.get('succ'))
 	else:
-		print('not found')
+		print(messages.get('nf'))
 
 
+def quit_app():
+	import sys
+	print('quiting program...')
+	sys.exit()
+
+
+actions = {
+	'1': create_contact,
+	'2': display_contacts,
+	'3': find_contact,
+	'4': update_contact,
+	'5': delete_contact,
+	'6': quit_app,
+}
 def main():
 	while True:
 		response = menu()
-		# Create contact
-		if response == '1':
-			create_contact()
-		# display contacts
-		elif response == '2':
-			display_contacts()
-		# find contacts
-		elif response == '3':
-			find_contact()
-		# update a contact
-		elif response == '4':
-			update_contact()
-		# delete a contact
-		elif response == '5':
-			delete_contact()
-		# quit
-		elif response == '6':
-			break
+		if actions.get(response) is not None:
+			actions[response]()
+		else:
+			print(messages.get('err'))
 
 
 if __name__ == '__main__':
