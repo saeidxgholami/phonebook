@@ -61,7 +61,7 @@ def update_contact():
 	name = input("Enter a name to update: ")
 	found = contact.find(name)
 	if found:
-		name, phone = get_info()
+		new_name, new_phone = get_info()
 		if contact.update(name, new_name, new_phone):
 			print(messages.get('succ'))
 		else:

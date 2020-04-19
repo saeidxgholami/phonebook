@@ -1,3 +1,10 @@
+# TODO:
+# normalize: strip name before adding
+# using id to add a contact
+# get first name and last name seperatly.
+#  
+
+
 
 contacts = {}
 
