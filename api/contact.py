@@ -36,13 +36,6 @@ def update(name, new_name, new_phone):
 	return True
 	
 
-
-
-
-
-
-
-	
-
-	
-	
+if __name__ == '__main__':
+	print(__file__)
+	print(dir())
