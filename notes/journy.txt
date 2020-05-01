@@ -6,3 +6,11 @@ to achive this I will use a text file.
 
 so let's do it.
 
+
+In textbased ui to eleminate if elif I used a dict
+
+I've create a text based ui which work properly the whole idea is read all data before any interaction between user and the app, after interaction all changes made up on the contacts list when user decide to leave the program all changes write to the file.
+
+It is fine code but I don't like to use model which is txt_file.py and the logic which is contact.py same time in ui.py which is view part of the mvc archetact. 
+I need to find a why to use just logic(code) in the view not model
+to do this I think I have to change logic part to use model
