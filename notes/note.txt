@@ -1,0 +1,49 @@
+Trying to learn python with a real world problem
+I would like to test out some pupolar and unpouplar packages to build out multiple versions of phoebook application
+The ways I like to test
+
+Save in memory
+-----
+Python List
+Python Dict
+
+
+Plan text Files
+-------
+Text File
+CSV File
+JSON File
+Pickle File
+Shelve File
+
+DBs
+------
+Mongo DB
+sqlite3
+Postgresql
+
+ORMs
+-----
+Pony
+Pewee
+SqlAlchemy
+
+
+UIs
+----
+Textbased
+PyQt
+Tkinter
+EEL
+
+
+How can I create a good architact in my app?
+How can I create python package?
+
+All those way I want to test out, some of them are packages, some of them are modules. 
+
+When I look to my app I realize I need some way to Interact with the app which is the UI part, some way I need to store data which is memory base storing, file base and database, to make my life easier when using DB I can use ORMs and finally I need some logic to Interact between UI and the storing part.
+
+In MVC model, the storing part called Model, UI part called View and the Logic part called Code. So I can use MVC architact to create my application.
+
+I don't know how to it correctly but I want to log my journy.

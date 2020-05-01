@@ -1,0 +1,8 @@
+in first version I've used python list to store contacts.
+each contact is a string in form of name:phone\n.
+
+first problem is obviously I need some way to store data permently.
+to achive this I will use a text file.
+
+so let's do it.
+
