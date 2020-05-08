@@ -23,3 +23,7 @@ open('somefile.csv', 'w', newline='')
 
 in first time if user want to read file the file is not exist which make the program to create file not found exception. To handle this error I need to use try cluse which is python method of exception handling.
 
+I'd create a api folder which contain different version of contact module
+whole purpose of this folder is to create and test diffrenet idea on who to create contact
+eigter functional version, class version, using list to store data or using dictionary as data structure and many more idea.
+
