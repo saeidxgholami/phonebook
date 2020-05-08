@@ -14,3 +14,12 @@ I've create a text based ui which work properly the whole idea is read all data 
 It is fine code but I don't like to use model which is txt_file.py and the logic which is contact.py same time in ui.py which is view part of the mvc archetact. 
 I need to find a why to use just logic(code) in the view not model
 to do this I think I have to change logic part to use model
+
+
+Working on csv file
+In windows os each line going to be have a new line to disable this pass newline='' to open function.
+example:
+open('somefile.csv', 'w', newline='')
+
+in first time if user want to read file the file is not exist which make the program to create file not found exception. To handle this error I need to use try cluse which is python method of exception handling.
+
